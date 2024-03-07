@@ -1,4 +1,7 @@
 # Homassistant
+https://github.com/home-assistant/supervised-installer
+-------------------------------------------------------------------------------------------------------
+
 https://community.home-assistant.io/t/install-home-assistant-os-with-kvm-on-ubuntu-headless-cli-only/254941
 # step
 apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils ovmf virt-manager
