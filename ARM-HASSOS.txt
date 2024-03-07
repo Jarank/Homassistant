@@ -1,0 +1,23 @@
+apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils ovmf virt-manager
+systemctl status libvirtd
+systemctl enable --now libvirtd
+cd /var/lib/libvirt/images/hassos-vm
+mkdir -vp /var/lib/libvirt/images/hassos-vm && cd /var/lib/libvirt/images/hassos-vm
+virsh pool-create-as --name diskpoll --type dir --target /var/lib/libvirt/images/hassos-vm
+apt install jq wget curl udisks2 libglib2.0-bin network-manager dbus apparmor
+
+
+ifconfig
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+https://github.com/home-assistant/os-agent/releases/tag/1.6.0
+https://github.com/home-assistant/os-agent/releases/download/1.6.0/os-agent_1.6.0_linux_aarch64.deb for Amlogic HK1-128Gb TV-BOX.
+
+---------------------------------------------------------------------------------------------------------------------------------
+wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_aarch64.deb
+dpkg -i os-agent_1.2.2_linux_aarch64.deb
+
+wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
+BYPASS_OS_CHECK=true dpkg -i homeassistant-supervised.deb
+---------------------------------------------------------------------------------------------------------------------------------
